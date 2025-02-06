@@ -10,8 +10,7 @@ interface DogApiService {
     suspend fun getRandomDogs(): DogResponse
 
     companion object {
-        const val BASE_URL = "https://dog.ceo/dog-api/"
-
+        const val BASE_URL = "https://dog.ceo/api/"
         fun create(): DogApiService {
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.learn.thedogapi"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.learn.thedogapi"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -59,14 +59,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //TODO: Dependências do Dog Api
-    implementation (libs.cardiview)
-    implementation("andoindx.recyclerview.recyclerview:1.0.0")
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation (libs.androidx.lifecycle.runtime.ktx.v262)
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
     //TODO: Image loading libraries
-    implementation("com.squareup.picasso:picasso:2.71828")
-    implementation ("com.google.accompanist:accompanist-coil:0.15.0")
+    implementation (libs.coil.compose)
+    implementation (libs.accompanist.coil)
 
 }

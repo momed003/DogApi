@@ -19,6 +19,7 @@ class DogViewModel : ViewModel(){
             try {
                 val response=apiService.getRandomDogs()
                 _dogImage.value=response.message
+                Log.d("ViewModel", response.status)
 
             }catch (e:Exception){
                 Log.d("ViewMode","${e.printStackTrace()}")
